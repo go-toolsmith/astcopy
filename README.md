@@ -3,7 +3,7 @@
 
 # astcopy
 
-Package astcopy implements Go AST deep copy operations. 
+Package astcopy implements Go AST reflection-free deep copy operations.
 
 ## Installation:
 
