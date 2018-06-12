@@ -1,5 +1,6 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/go-toolsmith/astcopy)](https://goreportcard.com/report/github.com/go-toolsmith/astcopy)
 [![GoDoc](https://godoc.org/github.com/go-toolsmith/astcopy?status.svg)](https://godoc.org/github.com/go-toolsmith/astcopy)
+[![Build Status](https://travis-ci.org/go-toolsmith/astcopy.svg?branch=master)](https://travis-ci.org/go-toolsmith/astcopy)
 
 # astcopy
 
