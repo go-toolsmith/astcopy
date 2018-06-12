@@ -28,7 +28,7 @@ import (
 
 func main() {
 	x := strparse.Expr(`1 + 2`).(*ast.BinaryExpr)
-	y := astcopy.BinaryExpr(y)
+	y := astcopy.BinaryExpr(x)
 	fmt.Println(astequal.Expr(x, y)) // => true
 
 	// Now modify x and make sure y is not modified.
