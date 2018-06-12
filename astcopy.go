@@ -876,6 +876,7 @@ func copyExpr(x ast.Expr) ast.Expr {
 		return MapType(x)
 	case *ast.ChanType:
 		return ChanType(x)
+
 	default:
 		panic("unhandled expr")
 	}
@@ -929,6 +930,7 @@ func copyStmt(x ast.Stmt) ast.Stmt {
 		return ForStmt(x)
 	case *ast.RangeStmt:
 		return RangeStmt(x)
+
 	default:
 		panic("unhandled stmt")
 	}
@@ -946,6 +948,7 @@ func copyDecl(x ast.Decl) ast.Decl {
 		return GenDecl(x)
 	case *ast.FuncDecl:
 		return FuncDecl(x)
+
 	default:
 		panic("unhandled decl")
 	}
