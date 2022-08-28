@@ -196,6 +196,22 @@ func IndexExpr(x *ast.IndexExpr) *ast.IndexExpr {
 	return &cp
 }
 
+// IndexListExpr returns x deep copy.
+// Copy of nil argument is nil.
+func IndexListExpr(x *typeparams.IndexListExpr) *typeparams.IndexListExpr {
+	if x == nil {
+		return nil
+	}
+	// X       Expr      // expression
+	// 	Lbrack  token.Pos // position of "["
+	// 	Indices []Expr    // index expressions
+	// 	Rbrack  token.Pos // position of "]"
+	cp := *x
+	cp.X = copyExpr(x.X)
+	cp.Indices = ExprList(x.Indices)
+	return &cp
+}
+
 // SliceExpr returns x deep copy.
 // Copy of nil argument is nil.
 func SliceExpr(x *ast.SliceExpr) *ast.SliceExpr {
@@ -858,6 +874,8 @@ func copyExpr(x ast.Expr) ast.Expr {
 		return SelectorExpr(x)
 	case *ast.IndexExpr:
 		return IndexExpr(x)
+	case *typeparams.IndexListExpr:
+		return IndexListExpr(x)
 	case *ast.SliceExpr:
 		return SliceExpr(x)
 	case *ast.TypeAssertExpr:
