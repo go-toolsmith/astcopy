@@ -202,10 +202,6 @@ func IndexListExpr(x *typeparams.IndexListExpr) *typeparams.IndexListExpr {
 	if x == nil {
 		return nil
 	}
-	// X       Expr      // expression
-	// 	Lbrack  token.Pos // position of "["
-	// 	Indices []Expr    // index expressions
-	// 	Rbrack  token.Pos // position of "]"
 	cp := *x
 	cp.X = copyExpr(x.X)
 	cp.Indices = ExprList(x.Indices)
