@@ -3,7 +3,6 @@
 [![build-img]][build-url]
 [![pkg-img]][pkg-url]
 [![reportcard-img]][reportcard-url]
-[![coverage-img]][coverage-url]
 [![version-img]][version-url]
 
 Package `astcopy` implements Go AST reflection-free deep copy operations.
@@ -54,7 +53,5 @@ func main() {
 [pkg-url]: https://pkg.go.dev/github.com/go-toolsmith/astp
 [reportcard-img]: https://goreportcard.com/badge/go-toolsmith/astp
 [reportcard-url]: https://goreportcard.com/report/go-toolsmith/astp
-[coverage-img]: https://codecov.io/gh/go-toolsmith/astp/branch/main/graph/badge.svg
-[coverage-url]: https://codecov.io/gh/go-toolsmith/astp
 [version-img]: https://img.shields.io/github/v/release/go-toolsmith/astp
 [version-url]: https://github.com/go-toolsmith/astp/releases
